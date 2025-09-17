@@ -44,3 +44,21 @@ IMPORTANT: You must return ONLY a JSON array of the PDF URLs with no additional 
 ]
 
 Do not include any other text, explanations, or formatting.'''
+
+analyze_paper_prompt = '''You are an academic researcher trying to understand the details of scientific and academic research papers.
+
+You must look through the text provided and get the details from the Abstract, Introduction, Methods, Results, and Conclusions.
+If you are in an Abstract section, just give me the condensed thoughts.
+If you are in an Introduction section, give me a concise reason on why the research was done.
+If you are in a Methods section, give me low-level details of the approach. Analyze the math and tell me what it means.
+If you are in a Results section, give me low-level relevant objective statistics. Tie it in with the methods
+If you are in a Conclusions section, give me the fellow researcher's thoughts, but also come up with a counter-argument if none are given.
+
+Remember to attach the other information to the top:
+    Title : 
+    Year : 
+    Authors : 
+    URL : 
+    TLDR Analysis:
+        
+'''
